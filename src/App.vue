@@ -1,10 +1,8 @@
 <template>
   <v-app>
-    <v-app-bar app>
-      <router-link to="/">Home</router-link>|
-      <router-link to="/about">About</router-link>
-    </v-app-bar>
-
+    
+      <pageHeader></pageHeader>
+   
     <v-content>
       <router-view/>
     </v-content>
@@ -12,11 +10,10 @@
 </template>
 
 <script>
-
+import pageHeader from '@/components/Header'
 export default {
-  name: "App",
-  data: () => ({
-    //
-  })
+ components:{
+   pageHeader
+ }
 };
 </script>
